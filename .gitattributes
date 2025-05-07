@@ -11,3 +11,4 @@ archive/test1.txt
 log.txt
 log0.txt
 test.txt
+*.h5 filter=lfs diff=lfs merge=lfs -text
