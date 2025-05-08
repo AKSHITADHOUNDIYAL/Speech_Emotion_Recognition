@@ -16,10 +16,4 @@ plotly
 requests
 tensorflow-cpu
 librosa
-soundfile
-tempfile
-requests
 streamlit_lottie
-time
-cv2
-datetime
