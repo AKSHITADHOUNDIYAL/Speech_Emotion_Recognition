@@ -16,7 +16,7 @@ plotly
 requests
 tensorflow-cpu
 streamlit_lottie
-librosa==0.10.1
+librosa>=0.10.1
 numba==0.58.1 
 llvmlite==0.41.1 
 scipy==1.10.1  
