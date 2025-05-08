@@ -46,13 +46,13 @@ COLOR_DICT = {
 }
 
 EMOTION_GIF = {
-    "happy": "https://media.giphy.com/media/1BcfiGlOGXzQ7OEcF7/giphy.gif",
-    "sad": "https://media.giphy.com/media/d2lcHJTG5Tscg/giphy.gif",
-    "angry": "https://media.giphy.com/media/11tTNkNy1SdXGg/giphy.gif",
-    "fear": "https://media.giphy.com/media/3oKIPwoeGErMmaI43C/giphy.gif",
-    "surprise": "https://media.giphy.com/media/xT0BKmtQGLbumr5RCM/giphy.gif",
-    "neutral": "https://media.giphy.com/media/xT0BKI8n9uU4R1F1EA/giphy.gif",
-    "disgust": "https://media.giphy.com/media/xUOxf3BfM5jpd2umv6/giphy.gif",
+    "happy": "https://media.giphy.com/media/3o7abAHdYvZdBNnGZq/giphy.gif",  
+    "sad": "https://media.giphy.com/media/L95W4wv8nnb9K/giphy.gif",  
+    "angry": "https://media.giphy.com/media/l3V0j3ytFyGHqiV7W/giphy.gif",  
+    "fear": "https://media.giphy.com/media/26ufdipQqU2lhNA4g/giphy.gif",  
+    "surprise": "https://media.giphy.com/media/3o7TKsQ8gqVrXhq5Li/giphy.gif",  
+    "neutral": "https://media.giphy.com/media/3o7TKsQ8gqVrXhq5Li/giphy.gif",  
+    "disgust": "https://media.giphy.com/media/3o7TKsQ8gqVrXhq5Li/giphy.gif"  
 }
 
 st.image("images/schema.png", use_container_width=True, caption="System Overview")
@@ -418,23 +418,26 @@ def display_results(path, pred, data3, sr):
                              ha='center', va='bottom', rotation=90)
                 st.pyplot(fig)
             
-            # Detailed results
-            st.markdown("### 🔍 Detailed Emotion Scores")
             
-            gender = detect_gender(path)
+            st.markdown("#### Gender")
+
             gender_col, emo_col = st.columns([1, 3])
-            
+            gender = detect_gender(path)
+
             with gender_col:
-                st.markdown(f"""
-                <div class="custom-card" style="text-align: center;">
-                    <h4 style="color: #6C63FF;">Detected Gender</h4>
-                    <img src="{'images/man.png' if gender == 'male' else 'images/woman.png'}" 
-                         width="150" style="margin: 0 auto;">
-                    <h3>{gender.capitalize()}</h3>
-                </div>
-                """, unsafe_allow_html=True)
-            
+                if gender == "male":
+                    st.image("https://media1.giphy.com/media/v1.Y2lkPTc5MGI3NjExN3A5Y2dyM2hwZWszbmhieTQyOXFnZHVkZ2RiNm42YjVraWpxbG81YSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/zKIFCGg9aV3dm/giphy.gif", width=150)  
+                    st.write("Male")
+                elif gender == "female":
+                    st.image("https://media0.giphy.com/media/v1.Y2lkPTc5MGI3NjExN2x1bmJ4bm42YXY3b3FiZ3A1NTFnMzlueXk0bXd2cWx1OG4zc2NiaCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/GsTGV7iAI9eZa/giphy.gif", width=150)  
+                    st.write("Female")
+                else:
+                    st.image("https://cdn-icons-png.flaticon.com/512/44/44947.png", width=150)  
+                    st.write("Unknown")
+
             with emo_col:
+                # Detailed results
+                st.markdown("### 🔍 Detailed Emotion Scores")
                 for i, emotion in enumerate(EMOTIONS):
                     color = COLOR_DICT.get(emotion, "grey")
                     percent = pred[i] * 100
