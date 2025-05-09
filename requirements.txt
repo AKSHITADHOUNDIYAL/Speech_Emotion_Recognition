@@ -21,3 +21,4 @@ numba==0.58.1
 llvmlite==0.41.1 
 scipy==1.10.1  
 torch==2.0.0
+keras==2.12.0
