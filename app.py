@@ -49,10 +49,10 @@ EMOTION_GIF = {
     "happy": "https://media.giphy.com/media/3o7abAHdYvZdBNnGZq/giphy.gif",  
     "sad": "https://media.giphy.com/media/L95W4wv8nnb9K/giphy.gif",  
     "angry": "https://media.giphy.com/media/l3V0j3ytFyGHqiV7W/giphy.gif",  
-    "fear": "https://media.giphy.com/media/26ufdipQqU2lhNA4g/giphy.gif",  
-    "surprise": "https://media.giphy.com/media/3o7TKsQ8gqVrXhq5Li/giphy.gif",  
-    "neutral": "https://media.giphy.com/media/3o7TKsQ8gqVrXhq5Li/giphy.gif",  
-    "disgust": "https://media.giphy.com/media/3o7TKsQ8gqVrXhq5Li/giphy.gif"  
+    "fear": "https://media2.giphy.com/media/v1.Y2lkPTc5MGI3NjExcjZ4d2ZwcXNsazJ3Z2FqaXJ6eHBtdzY5bWQ4YTcxc2NkdWhyZHd5NiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/14ut8PhnIwzros/giphy.gif",  
+    "surprise": "https://media.giphy.com/media/26ufdipQqU2lhNA4g/giphy.gif",  
+    "neutral": "https://media2.giphy.com/media/v1.Y2lkPTc5MGI3NjExdTB2MnlzemVhM2Myd3BzYjdiM3VtbGhmem1nNGg0eGtrMmFxenFkNyZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/7RKuyUSWRTbE2H6zG3/giphy.gif",  
+    "disgust": "https://media3.giphy.com/media/v1.Y2lkPTc5MGI3NjExOTE0Zm9vODFhaDRldjE2ajB4Y3hucndjbTlpNDJkYTkzYmJqcWpiZCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/fR7Svnbu3vb45fUblN/giphy.gif"  
 }
 
 st.image("images/schema.png", use_container_width=True, caption="System Overview")
